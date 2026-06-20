@@ -392,3 +392,19 @@ cursor:pointer;
 font-size:16px;
 
 }
+
+@media (max-width:768px){
+
+    .slides img{
+
+        width:180px;
+        height:220px;
+        object-fit:cover;
+    }
+
+    .slides{
+        gap:10px;
+        animation:slide 10s linear infinite;
+    }
+
+}
