@@ -150,7 +150,7 @@ spread:180
 setTimeout(()=>{
 
 alert(
-"We Love You Papa ❤️\n\nLove,\nGautami & Pradnya"
+"We Love You Papa ❤️\n\nLove,\nGautya & Pradnya"
 );
 
 },500);

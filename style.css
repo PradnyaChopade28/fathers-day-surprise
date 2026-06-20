@@ -112,7 +112,7 @@ overflow:hidden;
 .slides{
 display:flex;
 gap:20px;
-animation:slide 25s linear infinite;
+animation:slide 9s linear infinite;
 }
 
 .slides img{
