@@ -1,0 +1,394 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+ background: radial-gradient(
+    circle at 30% 25%,
+    #d0c380,
+    #48942f,
+    #0026ff,
+    #f4a300
+  );
+color:#ffffff;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:url("images/Family.jpeg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+z-index:2;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.start-btn{
+display:inline-block;
+padding:15px 35px;
+background:#ac7f58;
+color:white;
+text-decoration:none;
+border-radius:50px;
+margin-top:20px;
+}
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+.bubble-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.bubble{
+font-size:80px;
+cursor:pointer;
+animation:float 3s infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-20px);
+}
+}
+
+#popup{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.popup-card{
+background:white;
+color:black;
+padding:20px;
+border-radius:20px;
+max-width:500px;
+}
+
+.popup-card img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.slider{
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+gap:20px;
+animation:slide 25s linear infinite;
+}
+
+.slides img{
+height:350px;
+border-radius:20px;
+}
+
+@keyframes slide{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+.timeline-card,
+.card,
+.glass{
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+margin:20px auto;
+max-width:800px;
+}
+
+video{
+width:80%;
+border-radius:20px;
+}
+
+.card-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+width:300px;
+}
+
+.final{
+background:linear-gradient(135deg,#8720aa,#07000d);
+}
+
+.final button{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+}
+
+
+.coming-soon{
+    padding: 80px 10%;
+}
+
+.coming-soon .glass{
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    line-height: 1.8;
+    font-size: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+
+.memory-container{
+position:absolute;
+inset:0;
+z-index:10;
+pointer-events:none;
+}
+
+.gold-balloon{
+
+width:130px;
+height:170px;
+
+display:none;
+
+position:absolute;
+
+left:50%;
+bottom:-250px;
+
+transform:translateX(-50%);
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle at 28% 22%,
+#fffdf2 0%,
+#f9e27d 15%,
+#d4af37 45%,
+#b8860b 75%,
+#8b6914 100%
+);
+
+box-shadow:
+0 0 15px rgba(212,175,55,.6),
+0 0 35px rgba(212,175,55,.4);
+
+}
+
+.gold-balloon::before{
+
+content:"";
+
+position:absolute;
+
+width:35px;
+height:55px;
+
+background:
+rgba(255,255,255,.45);
+
+border-radius:50%;
+
+left:20px;
+top:25px;
+
+transform:rotate(-25deg);
+}
+
+.gold-balloon .sparkles{
+position:absolute;
+inset:-20px;
+}
+
+.gold-balloon::after{
+
+content:'';
+
+position:absolute;
+
+height:120px;
+width:3px;
+
+background:white;
+
+top:100%;
+left:50%;
+
+animation:wave 1s infinite ease-in-out;
+}
+
+@keyframes wave{
+
+0%{
+transform:rotate(-8deg);
+}
+
+50%{
+transform:rotate(8deg);
+}
+
+100%{
+transform:rotate(-8deg);
+}
+
+}
+
+@keyframes sparkle{
+
+50%{
+transform:scale(1.4);
+opacity:.5;
+}
+
+}
+
+.fly{
+    display:block;
+    animation:flyUp 1.5s ease-out forwards;
+}
+
+@keyframes flyUp{
+
+from{
+bottom:-250px;
+}
+
+to{
+bottom:38%;
+}
+
+}
+
+.memory-card{
+    display:none;
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    animation:fadeIn 1s;
+}
+
+.memory-card img{
+    width:100%;
+    max-height:450px;
+    object-fit:contain;
+    border-radius:20px;
+    background:#fff;
+    padding:10px;
+}
+
+.memory-card p{
+    margin-top:20px;
+    font-size:24px;
+    line-height:1.6;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+.gold-balloon::before{
+content:'✨';
+position:absolute;
+font-size:30px;
+left:-20px;
+top:20px;
+animation:sparkle 1s infinite;
+}
+
+@keyframes sparkle{
+50%{
+transform:scale(1.4);
+opacity:.5;
+}
+}
+
+.gold-balloon svg{
+position:absolute;
+top:100%;
+left:50%;
+}
+
+.music-btn{
+
+margin-top:15px;
+
+padding:10px 25px;
+
+border:none;
+
+border-radius:30px;
+
+background:#d4af37;
+
+color:white;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
